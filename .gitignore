@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+Client\LauzHackClient\bin/*
+Client\LauzHackClient\.vs/*
+
 # User-specific files
 *.rsuser
 *.suo
