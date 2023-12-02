@@ -1,9 +1,11 @@
+import "inc.js"
+
 const { app, BrowserWindow} = require('electron');
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 470,
+        height: 170
     });
 
     win.setMenu(null);
@@ -18,3 +20,4 @@ app.whenReady().then(()=>{
 app.on('window-all-closed', ()=>{
     if(process.platform !== 'darwin') app.quit();
 });
+

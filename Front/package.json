@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/tiago-gmfrr/LauzHack-2023#readme",
   "devDependencies": {
+    "@material/web": "^1.0.1",
     "electron": "^27.1.3"
   }
 }
