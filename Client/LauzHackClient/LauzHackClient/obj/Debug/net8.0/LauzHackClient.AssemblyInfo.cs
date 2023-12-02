@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LauzHackClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb4fc20aaf3628658d60cb0cbe3279a23deee9ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("LauzHackClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LauzHackClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

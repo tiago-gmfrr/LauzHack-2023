@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LauzHackClient
-build_property.ProjectDir = C:\Users\tiago\source\repos\LauzHack-2023\Client\LauzHackClient\LauzHackClient\
+build_property.ProjectDir = C:\Users\tiago\OneDrive\Área de Trabalho\LauzHack-2023\Client\LauzHackClient\LauzHackClient\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
