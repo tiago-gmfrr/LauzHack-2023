@@ -100,12 +100,12 @@ namespace LoginGame
                 if (!turn_to_play)
                 {
                     p1_plays.Add(played_key);
-                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(played_key), 255, 0, 0);
+                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(played_key), 255, 0, 0);
                 }
                 else
                 {
                     p2_plays.Add(played_key);
-                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(played_key), 0, 0, 255);
+                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(played_key), 0, 0, 255);
                 }
 
 
@@ -133,6 +133,12 @@ namespace LoginGame
                         }
                     }
 
+                }
+
+                if (p2_plays.Count >= 4)
+                {
+                    Animations.Wave(Color.White);
+                    in_game = false;
                 }
 
                 turn_to_play = !turn_to_play;

@@ -39,7 +39,7 @@ while (true)
             Animations.Wave(Color.Blue, Animations.Direction.Left);
             Animations.Wave(Color.Blue, Animations.Direction.Down);
             Obstacle.StartGame();
-            //Animations.Wave(Color.Red);
+            Animations.Wave(Color.Red);
             LogitechGSDK.LogiLedSetLighting(0, 0, 0);
             break;
     }

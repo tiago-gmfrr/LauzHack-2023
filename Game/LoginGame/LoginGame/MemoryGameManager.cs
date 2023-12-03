@@ -23,7 +23,7 @@ namespace LoginGame
           //2  played_keys.Add('y');
             for (int i = 0; i < 5; i++)
             {
-               played_keys.Add(Comon.GetKeys().ElementAt(rnd.Next(25)).Key);
+               played_keys.Add(Common.GetKeys().ElementAt(rnd.Next(24)).Key);
             }
 
             bool in_game = true;
@@ -40,9 +40,11 @@ namespace LoginGame
                 
                 //Show where to touch
                 foreach (char key in played_keys) {
-                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(key), 0, 0, 100);
-                    Thread.Sleep(1000);  
-                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(key), 0, 0, 0);
+                    Animations.GlowUp(Color.FromArgb(0, 0, 100), Common.GetKeys().GetValueOrDefault(key));
+                    //LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(key), 0, 0, 100);
+                    
+                    //LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(key), 0, 0, 0);
+                    Animations.GlowDown(Color.FromArgb(0, 0, 100), Common.GetKeys().GetValueOrDefault(key));
                 }
                 
                 //Play logic
@@ -58,7 +60,7 @@ namespace LoginGame
                         // Send winner information
                     } else
                     {
-                        LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(key), 0, 100, 0);
+                        LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(key), 0, 100, 0);
                     }
                     Thread.Sleep(50);
                 }
@@ -72,7 +74,7 @@ namespace LoginGame
                 // Show all keys inserted
                 foreach (char key in played_keys)
                 {
-                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(key), 0, 255, 0);
+                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(key), 0, 255, 0);
                 }
 
                 bool added_succesfuly = false;
@@ -87,7 +89,7 @@ namespace LoginGame
 
                     played_keys.Add(played_key_add);
                     added_succesfuly = true;
-                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Comon.GetKeys().GetValueOrDefault(played_key_add), 0, 255, 0);
+                    LogitechGSDK.LogiLedSetLightingForKeyWithKeyName(Common.GetKeys().GetValueOrDefault(played_key_add), 0, 255, 0);
 
 
                 }

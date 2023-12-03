@@ -38,18 +38,18 @@ namespace logitest1
 
 		static void Pipe()
 		{
-			int blank = random.Next(Comon.Height);
+			int blank = random.Next(Common.Height);
 
-			int x = Comon.Width - 1;
+			int x = Common.Width - 1;
 
 			while (!gameOver)
 			{
-				for (int i = 0; i < Comon.Height; i++)
+				for (int i = 0; i < Common.Height; i++)
 				{
 					if (i == blank) continue;
-					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Comon.keys[i, x], 0, 0, 0);
+					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Common.keys[i, x], 0, 0, 0);
 					if (x == 0) continue;
-					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Comon.keys[i, x - 1], 0, 255, 0);
+					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Common.keys[i, x - 1], 0, 255, 0);
 				}
 
 				if (x == 0)
@@ -80,12 +80,12 @@ namespace logitest1
 				if (move != 0)
 				{
 					if (player + move < 0) continue;
-					if (player + move >= Comon.Height) continue;
+					if (player + move >= Common.Height) continue;
 
-					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Comon.keys[player, 0], 0, 0, 0);
+					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Common.keys[player, 0], 0, 0, 0);
 					player += move;
 					move = 0;
-					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Comon.keys[player, 0], 255, 255, 255);
+					LogitechGSDK.LogiLedSetLightingForKeyWithKeyName((keyboardNames)Common.keys[player, 0], 255, 255, 255);
 				}
 			}
 		}
