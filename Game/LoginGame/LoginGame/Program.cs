@@ -10,12 +10,13 @@ using System.Net.Sockets;
 LogitechGSDK.LogiLedInit();
 LogitechGSDK.LogiLedSaveCurrentLighting();
 
-
+//Animations.StartAnimation();
 
 while (true)
 {
     Animations.ClearKeyboard(Color.Black, Animations.Direction.Right);
-    switch (Console.ReadKey().KeyChar.ToString().ToLower()[0])
+    char game = Console.ReadKey().KeyChar.ToString().ToLower()[0];
+    switch (game)
     {
         case '1':
             Animations.Wave(Color.Blue);
@@ -38,7 +39,7 @@ while (true)
             Animations.Wave(Color.Blue, Animations.Direction.Left);
             Animations.Wave(Color.Blue, Animations.Direction.Down);
             Obstacle.StartGame();
-            Animations.Wave(Color.Red);
+            //Animations.Wave(Color.Red);
             LogitechGSDK.LogiLedSetLighting(0, 0, 0);
             break;
     }
