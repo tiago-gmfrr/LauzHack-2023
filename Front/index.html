@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log'In Games</title>
+    <script src="node_modules/net/index.js"></script>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <script src="lobby.js" type="text/javascript"></script>
-    
+    <script type="text/javascript">
+
+        // const net = require('net');
+        const client = new net.Socket();
+
+        client.connect(11111, '127.0.0.1', () => {
+            console.log('Connected to server');
+            client.write('Hello from Electron!');
+        });
+
+        client.on('data', (data) => {
+            console.log('Received:', data.toString());
+            // Handle the received data as needed
+        });
+
+        client.on('close', () => {
+            console.log('Connection closed');
+        });
+
+        function createRoom() {
+            client.write('message', 'Hello from another file!2<EOF>');
+        }
+
+        function joinRoom() {
+
+        }
+    </script>
     <button class="mdc-button mdc-button--raised" onclick="createRoom()">
         <span class="mdc-button__label">Create room</span>
     </button>
@@ -16,4 +44,7 @@
         <span class="mdc-button__label">Join room</span>
     </button>
 </body>
+
+<!-- <script src="http://127.0.0.1:11111/socket.io/socket.io.js"></script> -->
+
 </html>
