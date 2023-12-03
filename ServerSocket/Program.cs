@@ -4,8 +4,9 @@ using System.Net;
 using System.Text;
 
 Console.WriteLine("Hello, World!");
-ServerHost();
 
+Thread serverThread = new(new ThreadStart(ServerHost));
+serverThread.Start();
 
 
 static void ServerHost()
@@ -14,16 +15,12 @@ static void ServerHost()
     // for the socket. Dns.GetHostName
     // returns the name of the host 
     // running the application.
-    IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
-    Console.WriteLine($"{nameof(ipHost)} : {ipHost}");
-    IPAddress ipAddr = ipHost.AddressList[0];
-    Console.WriteLine($"{nameof(ipAddr)} : {ipAddr}");
-    IPEndPoint localEndPoint = new IPEndPoint(ipAddr, 11111);
-    Console.WriteLine($"{nameof(localEndPoint)} : {localEndPoint}");
+	IPEndPoint localEndPoint = new(IPAddress.Parse("10.177.88.191"), 11111);
+	Console.WriteLine($"{nameof(localEndPoint)} : {localEndPoint}");
 
     // Creation TCP/IP Socket using 
     // Socket Class Constructor
-    Socket listener = new Socket(ipAddr.AddressFamily,
+    Socket listener = new Socket(localEndPoint.AddressFamily,
                  SocketType.Stream, ProtocolType.Tcp);
 
     try
@@ -79,6 +76,11 @@ static void ServerHost()
             // Send a message to Client 
             // using Send() method
             clientSocket.Send(message);
+
+            while (true)
+            {
+
+            }
 
             // Close client Socket using the
             // Close() method. After closing,
