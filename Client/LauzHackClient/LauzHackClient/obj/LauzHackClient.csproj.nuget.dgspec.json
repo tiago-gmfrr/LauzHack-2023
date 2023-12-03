@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj": {}
+    "C:\\Users\\stefa\\OneDrive\\Bureau\\Lauzhack23\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj": {
+    "C:\\Users\\stefa\\OneDrive\\Bureau\\Lauzhack23\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj",
+        "projectUniqueName": "C:\\Users\\stefa\\OneDrive\\Bureau\\Lauzhack23\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj",
         "projectName": "LauzHackClient",
-        "projectPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj",
-        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tiago\\OneDrive\\Área de Trabalho\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\obj\\",
+        "projectPath": "C:\\Users\\stefa\\OneDrive\\Bureau\\Lauzhack23\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\LauzHackClient.csproj",
+        "packagesPath": "C:\\Users\\stefa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stefa\\OneDrive\\Bureau\\Lauzhack23\\LauzHack-2023\\Client\\LauzHackClient\\LauzHackClient\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\stefa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
